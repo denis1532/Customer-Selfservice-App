@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Meat dishes</fullName>
+        <default>false</default>
+        <label>Meat dishes</label>
+    </customValue>
+    <customValue>
+        <fullName>Vegetarian dishes</fullName>
+        <default>false</default>
+        <label>Vegetarian dishes</label>
+    </customValue>
+    <customValue>
+        <fullName>Fruit salads</fullName>
+        <default>false</default>
+        <label>Fruit salads</label>
+    </customValue>
+    <customValue>
+        <fullName>Vegetable salads</fullName>
+        <default>false</default>
+        <label>Vegetable salads</label>
+    </customValue>
+    <customValue>
+        <fullName>Meat salads</fullName>
+        <default>false</default>
+        <label>Meat salads</label>
+    </customValue>
+    <customValue>
+        <fullName>Cold drinks</fullName>
+        <default>false</default>
+        <label>Cold drinks</label>
+    </customValue>
+    <customValue>
+        <fullName>Hot drinks</fullName>
+        <default>false</default>
+        <label>Hot drinks</label>
+    </customValue>
+    <customValue>
+        <fullName>Alcohol drinks</fullName>
+        <default>false</default>
+        <label>Alcohol drinks</label>
+    </customValue>
+    <customValue>
+        <fullName>Ice-Creams</fullName>
+        <default>false</default>
+        <label>Ice-Creams</label>
+    </customValue>
+    <customValue>
+        <fullName>Cakes</fullName>
+        <default>false</default>
+        <label>Cakes</label>
+    </customValue>
+    <masterLabel>Subcategory</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

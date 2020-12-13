@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subcategory__c</fullName>
+    <externalId>false</externalId>
+    <label>Subcategory</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Subcategory</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Main Dishes</controllingFieldValue>
+            <valueName>Meat dishes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Main Dishes</controllingFieldValue>
+            <valueName>Vegetarian dishes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salads</controllingFieldValue>
+            <valueName>Fruit salads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salads</controllingFieldValue>
+            <valueName>Vegetable salads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salads</controllingFieldValue>
+            <valueName>Meat salads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drinks</controllingFieldValue>
+            <valueName>Cold drinks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drinks</controllingFieldValue>
+            <valueName>Hot drinks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Drinks</controllingFieldValue>
+            <valueName>Alcohol drinks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Desserts</controllingFieldValue>
+            <valueName>Ice-Creams</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Desserts</controllingFieldValue>
+            <valueName>Cakes</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

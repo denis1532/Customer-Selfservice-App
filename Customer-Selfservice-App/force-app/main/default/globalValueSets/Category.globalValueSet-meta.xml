@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Main Dishes</fullName>
+        <default>false</default>
+        <label>Main Dishes</label>
+    </customValue>
+    <customValue>
+        <fullName>Salads</fullName>
+        <default>false</default>
+        <label>Salads</label>
+    </customValue>
+    <customValue>
+        <fullName>Drinks</fullName>
+        <default>false</default>
+        <label>Drinks</label>
+    </customValue>
+    <customValue>
+        <fullName>Desserts</fullName>
+        <default>false</default>
+        <label>Desserts</label>
+    </customValue>
+    <masterLabel>Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
