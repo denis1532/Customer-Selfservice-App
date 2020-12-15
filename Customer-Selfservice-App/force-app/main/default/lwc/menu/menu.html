@@ -1,0 +1,41 @@
+<template>
+    <template if:true={dishes}>
+        <lightning-card
+            title='Menu'
+            icon-name="utility:food_and_drink"
+            class="slds-p-around_x-small">
+
+                <c-filters
+                    onswitchcategories={handleSwitchCategories}>
+                </c-filters>
+
+                <lightning-layout multiple-rows class="slds-p-around_x-small">
+                    <template for:each={dishes} for:item="dish">
+                        <lightning-layout-item class="slds-p-around_x-small" size="3" key={dish.Id}>
+                            <c-dish-tile
+                                dish-id={dish.Id}
+                                dish-name={dish.Name}
+                                dish-price={dish.Price__c}
+                                dish-description={dish.Description__c}
+                                dish-count={dish.count}
+                                dish-comment={dish.comment}
+                                onupdatedishdata={handleUpdateDishData}>
+                            </c-dish-tile>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <button
+                        class="slds-button slds-button_neutral"
+                        onclick={openOrderHistory}
+                        title="Previous Orders">Previous Orders
+                    </button>
+                </lightning-layout>
+        </lightning-card>
+    </template>
+
+<!--     <template if:true={isOpenHistory}>
+        <c-orders onclosemodal={closeOrderHistory}></c-orders>
+    </template> -->
+</template>

@@ -1,0 +1,54 @@
+<template>
+    <lightning-card
+        title="Current Order"
+        icon-name="utility:food_and_drink"
+        class="slds-p-around_x-small">
+
+        <p class="slds-m-around_medium">
+            Total Price
+            <lightning-formatted-number
+            class="slds-m-around_x-small"
+            value={totalPrice}
+            format-style="currency"
+            currency-code="USD">
+            </lightning-formatted-number>
+        </p>
+
+        <lightning-layout
+            class="slds-p-around_small">
+            <lightning-button
+            class="slds-m-around_x-small"
+            label="Order Details"
+            onclick={openModal}></lightning-button>
+            <lightning-button
+            class="slds-m-around_x-small"
+            label="Make an order"
+            onclick={makeAnOrder}></lightning-button>
+        </lightning-layout>
+
+        <lightning-layout
+            class="slds-p-around_small">
+
+            <lightning-input type="checkbox"
+                            label="Home delivery"
+                            checked={isDelivery}
+                            value={isDelivery}
+                            onchange={switchIsDelivery}>
+            </lightning-input>
+
+        </lightning-layout>
+
+        <template if:false={isDisabledAddress}>
+            <lightning-textarea class="slds-p-around_small" label="Delivery Address" onchange={addressChange} placeholder="type here..." max-length="140" value={deliveryAddress}>
+            </lightning-textarea>
+        </template>
+
+        <template if:true={isModalOpen}>
+            <c-order-details
+                dishes={dishes}
+                total-price={totalPrice}
+                onclosemodalevent={handleCloseModal}>
+            </c-order-details>
+        </template>
+    </lightning-card>
+</template>
