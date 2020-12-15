@@ -33,3 +33,10 @@
 3. Lightning components
 4. Salesforce Community
 5. Salesforce Reports & Dashboards
+
+## Instructions
+1. Clone the git repository
+```
+git clone https://github.com/denis1532/Customer-Selfservice-App/tree/master/Customer-Selfservice-App
+```
+2. Assign your user a "Customer permission set" to get access to custom objects and fields
