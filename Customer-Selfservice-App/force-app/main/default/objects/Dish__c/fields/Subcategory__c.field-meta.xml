@@ -11,11 +11,11 @@
         <restricted>true</restricted>
         <valueSetName>Subcategory</valueSetName>
         <valueSettings>
-            <controllingFieldValue>Main Dishes</controllingFieldValue>
+            <controllingFieldValue>Main dishes</controllingFieldValue>
             <valueName>Meat dishes</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Main Dishes</controllingFieldValue>
+            <controllingFieldValue>Main dishes</controllingFieldValue>
             <valueName>Vegetarian dishes</valueName>
         </valueSettings>
         <valueSettings>
