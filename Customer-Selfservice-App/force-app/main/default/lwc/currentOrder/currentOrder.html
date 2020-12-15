@@ -14,8 +14,7 @@
             </lightning-formatted-number>
         </p>
 
-        <lightning-layout
-            class="slds-p-around_small">
+        <lightning-layout class="slds-p-around_small">
             <lightning-button
                 class="slds-m-around_x-small"
                 label="Order Details"
@@ -29,16 +28,13 @@
             </lightning-button>
         </lightning-layout>
 
-        <lightning-layout
-            class="slds-p-around_small">
-
+        <lightning-layout class="slds-p-around_small">
             <lightning-input type="checkbox"
                             label="Home delivery"
                             checked={isDelivery}
                             value={isDelivery}
                             onchange={switchIsDelivery}>
             </lightning-input>
-
         </lightning-layout>
 
         <template if:false={isDisabledAddress}>
