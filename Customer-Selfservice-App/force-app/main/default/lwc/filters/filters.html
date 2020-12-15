@@ -1,0 +1,25 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-combobox
+                class="slds-p-around_small"
+                name="Category"
+                label="Category"
+                value={selectedCategory}
+                placeholder="All"
+                options={categoryValues}
+                onchange={handleCategoryChange}></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-combobox
+                class="slds-p-around_small"
+                name="Subcategory"
+                label="Subcategory"
+                value={selectedSubcategory}
+                placeholder="All"
+                disabled={isDisabledSubcategory}
+                options={subcategoryValues}
+                onchange={handleSubcategoryChange}></lightning-combobox>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
