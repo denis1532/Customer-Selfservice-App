@@ -5,6 +5,10 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
+		<members>Customer_Selfservice_App</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
 		<members>Dish_Order__c.Comment__c</members>
 		<members>Dish_Order__c.Dish_Count__c</members>
 		<members>Dish_Order__c.Dish__c</members>
@@ -28,13 +32,17 @@
 	</types>
 	<types>
 		<members>Category</members>
-        <members>Delivery_status</members>
-        <members>Subcategory</members>
+		<members>Delivery_status</members>
+		<members>Subcategory</members>
 		<name>GlobalValueSet</name>
 	</types>
 	<types>
 		<members>*</members>
 		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LightningMessageChannel</name>
 	</types>
 	<types>
 		<members>*</members>
