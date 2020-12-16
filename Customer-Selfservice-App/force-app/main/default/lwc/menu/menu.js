@@ -10,7 +10,6 @@ export default class Menu extends LightningElement {
     @track subcategory;
     @track displayedDishes;
     @track error;
-    @track isOpenHistory = false;
 
     @wire(MessageContext)
     messageContext;
@@ -92,14 +91,6 @@ export default class Menu extends LightningElement {
         dishes: this.allDishesData,
         }
         publish(this.messageContext, DISH_ORDER_MC, message);
-    }
-
-    openOrderHistory() {
-        this.isOpenHistory = true;
-    }
-
-    closeOrderHistory() {
-        this.isOpenHistory = false;
     }
 
     @api
