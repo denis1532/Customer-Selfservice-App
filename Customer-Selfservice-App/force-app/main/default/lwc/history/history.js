@@ -18,7 +18,6 @@ export default class Orders extends LightningElement {
     ];
     @track statusOptions = [];
     @track dateOptions=[];
-    @track dishesOptions = [];
 
     @track totalPricesSum = 0;
 
@@ -35,7 +34,6 @@ export default class Orders extends LightningElement {
 
     status = 'All';
     orderDate = 'All';
-    orderDish = 'All';
 
     isModalOpen = false;
 
@@ -71,7 +69,7 @@ export default class Orders extends LightningElement {
 
         if(this.status != 'All') {
             this.filteredOrders = this.filteredOrders.filter((order) => {
-                return order.Status__c == this.status;
+                return order.Delivery_Status__c == this.status;
             })
         }
 
@@ -79,16 +77,6 @@ export default class Orders extends LightningElement {
             this.filteredOrders = this.filteredOrders.filter((order) => {
                 return order.Order_Date__c == this.orderDate;
             })
-        }
-
-        if(this.orderDish != 'All') {
-            this.filteredOrders = this.filteredOrders.filter((order) => {
-                let orderItems = order.Item_Orders__r;
-                orderItems = orderItems.filter((orderItem) => {
-                    return orderItem.Dish__r.Name == this.orderDish;
-                });
-            return orderItems.length > 0;
-            });
         }
     }
 
@@ -100,12 +88,6 @@ export default class Orders extends LightningElement {
 
     handleDateChange(event) {
         this.orderDate = event.detail.value;
-        this.filterOrders();
-        this.calculateTotalPrice();
-    }
-
-    handleDishChange(event) {
-        this.orderDish = event.detail.value;
         this.filterOrders();
         this.calculateTotalPrice();
     }
@@ -123,27 +105,6 @@ export default class Orders extends LightningElement {
         });
     }
 
-    getDishOptions(result){
-        this.dishesOptions = [{label:'All', value:'All'}];
-        const setOfDishes = new Set();
-        result.forEach((order) => {
-            const orderDishes = order.Dish_Orders__r;
-
-            orderDishes.forEach((orderDish) => {
-                setOfDishes.add(orderDish.Dish__r.Name);
-                console.log(orderDish.Dish__r.Name)
-            });
-        });
-
-        const arrayOfDishes = [...setOfDishes];
-
-        arrayOfDishes.forEach((dishName) => {
-            this.dishesOptions.push({
-                label: dishName,
-                value: dishName
-            })
-        });
-    }
 
     calculateTotalPrice(){
         this.totalPricesSum = 0;
@@ -156,7 +117,7 @@ export default class Orders extends LightningElement {
     dispatchCloseModal() {
         this.status = 'All';
         this.orderDate = 'All';
-        this.orderDish = 'All';
+        // this.orderDish = 'All';
         const event = new CustomEvent('closemodal');
         this.dispatchEvent(event);
         this.getOrders();
