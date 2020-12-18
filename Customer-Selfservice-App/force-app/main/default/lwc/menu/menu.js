@@ -72,6 +72,9 @@ export default class Menu extends LightningElement {
         this.category = event.detail.category === 'All' ? null : event.detail.category;
         this.subcategory = event.detail.subcategory === 'All' ? null : event.detail.subcategory;
         this.loadDishes()
+        .then(() => {
+            this.syncDishOrderData;
+        })
         .catch(error => {
             this.error = error;
             console.log(error);
