@@ -25,14 +25,11 @@ export default class Orders extends LightningElement {
         orderInfo;
 
     @wire(getPicklistValues, {recordTypeId: '$orderInfo.data.defaultRecordTypeId', fieldApiName: STATUS_FIELD })
-        statusFieldInfo({ data, error }) {
+        statusFieldInfo({ data }) {
             if (data){
                 this.statusOptions = [...data.values];
                 this.statusOptions.push({label: 'All', value: 'All'});
             }
-            /* .catch(error => {
-                this.error = error;
-            }); */
         }
 
     status = 'All';
