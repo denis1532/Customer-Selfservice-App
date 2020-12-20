@@ -30,6 +30,9 @@ export default class Orders extends LightningElement {
                 this.statusOptions = [...data.values];
                 this.statusOptions.push({label: 'All', value: 'All'});
             }
+            /* .catch(error => {
+                this.error = error;
+            }); */
         }
 
     status = 'All';
@@ -117,7 +120,6 @@ export default class Orders extends LightningElement {
     dispatchCloseModal() {
         this.status = 'All';
         this.orderDate = 'All';
-        // this.orderDish = 'All';
         const event = new CustomEvent('closemodal');
         this.dispatchEvent(event);
         this.getOrders();

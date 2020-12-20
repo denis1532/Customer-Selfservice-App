@@ -15,7 +15,7 @@ public with sharing class DishController {
                       WHERE Category__c = :category
                       AND Subcategory__c = :subcategory];
         }
-        
+
         return dishes;
     }
 }
